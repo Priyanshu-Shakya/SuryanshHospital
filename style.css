@@ -1,0 +1,370 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+
+header {
+  background-color: #004d40;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-photo {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d32f2f;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.sub-header {
+  background-color: #b71c1c; /* Deep red for urgency */
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 16px;
+  text-align: center;
+  border-top: 3px solid #f44336;
+  border-bottom: 3px solid #f44336;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.hospital-name {
+  color: red;
+  margin: 0;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d40;
+  color: white;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 4px solid #d32f2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* SH Logo + Name (Left) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sh-logo {
+  height: 70px;
+  width: auto;
+}
+
+.hospital-name {
+  font-size: 40px;       /* ⬆️ Increased size */
+  font-weight: bold;
+  color: #ffeb3b;
+  margin: 0;
+  text-shadow: 1px 1px 2px black;
+  line-height: 1.2;       /* Optional: adjust spacing if needed */
+}
+
+/* Doctor Info + Emergency (Right) */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doctor-info p strong {
+  font-size: 25px;          /* Bigger name */
+}
+.doctor-phone {
+  font-size: 14px; /* Smaller phone number */
+  display: block;
+  margin-top: 4px;
+  color: #b2dfdb;
+}
+/* Increase name and phone number text */
+.doctor-info p {
+  margin: 0;
+  font-size: 18px;          /* Increased from 14px */
+  line-height: 1.4;
+  color: #e0f2f1;
+}
+
+.doctor-photo {
+  width: 80px;              /* Increased from 60px */
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ff5252;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.emergency-badge {
+  background-color: #ff5252;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔁 Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-left,
+  .header-right {
+    align-items: center;
+  }
+
+  .doctor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+nav {
+  background-color: #00332e;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px;
+  background: white;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #004d40;
+}
+
+
+/* ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 2px solid #b2dfdb;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.05);
+  border-color: #26a69a;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 150px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: darkred;
+}
+
+.form-message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #00332e;
+  color: white;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .services-container {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXQicZ3Hqf1JPXm9hR3IOv74H590fsZUBsHQ&s') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+}
+
+
+/* Apply to all sections */
+section {
+  padding: 30px;
+  background: #e3f2fd; /* Blueish hospital feel */
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Optional: add a slightly different shade to alternate sections */
+#about { background-color: #e3f2fd; }
+#services { background-color: #f0f8ff; }
+#gallery { background-color: #bbdefb; }
+#appointment { background-color: #e3f2fd; }
+#contact { background-color: #f0f8ff; }

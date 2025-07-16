@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suryansh Hospital | Mainpuri</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add responsive design */
+      @media screen and (max-width: 768px) {
+        .main-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .header-left,
+        .header-right {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .doctor-info {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hospital-name {
+          font-size: 28px;
+        }
+
+        .doctor-info p strong {
+          font-size: 18px;
+        }
+
+        .doctor-phone {
+          font-size: 12px;
+        }
+
+        .doctor-photo {
+          width: 60px;
+          height: 60px;
+        }
+
+        .emergency-badge {
+          font-size: 12px;
+          padding: 4px 10px;
+        }
+
+        nav ul li {
+          display: block;
+          margin: 8px 0;
+        }
+
+        section {
+          padding: 20px;
+          margin: 10px;
+        }
+
+        .gallery-item img {
+          height: 100px;
+        }
+
+        .modal-content {
+          padding: 20px;
+        }
+
+        form input,
+        form textarea {
+          font-size: 14px;
+        }
+
+        form button {
+          font-size: 14px;
+        }
+
+        footer {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <!-- Left: SH Logo + Hospital Name -->
+      <div class="header-left">
+        <img src="logo1.png" alt="Suryansh Hospital Logo" class="sh-logo" />
+        <h1 class="hospital-name">Suryansh Hospital</h1>
+      </div>
+
+      <!-- Right: Doctor Info -->
+      <div class="header-right">
+        <div class="doctor-info">
+          <img src="doctor.jpg" alt="Dr. A.K. Singh" class="doctor-photo" />
+          <p>
+            <strong>Dr. A.K. Singh</strong><br />
+            <span class="doctor-phone">📞 7535905959, 7017202805</span>
+          </p>
+        </div>
+        <div class="emergency-badge">24×7 Emergency</div>
+      </div>
+    </header>
+
+    <div class="sub-header">
+      <marquee behavior="scroll" direction="left" scrollamount="7" style="color: white; background-color: crimson; font-size: 20px; font-weight: bold; padding: 8px;" >
+        🚨 Emergency Delivery Available 24/7 | Expert in Normal & C-Section Deliveries | We provide 24×7 Emergency Services | ICU | Oxygen | Ventilator
+        Support | Dialysis | Ambulance Available Anytime 🚑
+      </marquee>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Treatments</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#appointment">Book Appointment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>Suryansh Hospital</strong>, Mainpuri. We provide
+        expert care for a range of chronic and acute diseases under the guidance
+        of Dr. A.K. Singh. Our goal is compassionate, modern, and affordable
+        healthcare for everyone.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Treatment & Care Areas</h2>
+      <div class="services-grid">
+        <!-- Each card will trigger a modal -->
+        <div class="service-card" data-service="Heart Disease">
+          ❤️ Heart Disease
+        </div>
+        <div class="service-card" data-service="Blood Pressure">
+          💓 Blood Pressure
+        </div>
+        <div class="service-card" data-service="Kidney Disorders">
+          🧫 Kidney Disorders
+        </div>
+        <div class="service-card" data-service="Liver Diseases">
+          🧬 Liver Diseases
+        </div>
+        <div class="service-card" data-service="Lung Issues">
+          🫁 Lung Issues
+        </div>
+        <div class="service-card" data-service="Joint Pain / Arthritis">
+          🦴 Joint Pain / Arthritis
+        </div>
+        <div class="service-card" data-service="Thyroid Treatment">
+          🧠 Thyroid Treatment
+        </div>
+        <div class="service-card" data-service="Diabetes">
+          🍬 Diabetes (Sugar)
+        </div>
+        <div class="service-card" data-service="Chest Pain">🫀 Chest Pain</div>
+        <div class="service-card" data-service="Epileptic Seizures">
+          ⚡ Epileptic Seizures
+        </div>
+        <div class="service-card" data-service="Dengue">🦟 Dengue</div>
+        <div class="service-card" data-service="Malaria">🌿 Malaria</div>
+        <div class="service-card" data-service="Hepatitis">🧪 Hepatitis</div>
+        <div class="service-card" data-service="Normal Delivery">
+          👶 Normal Delivery
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="serviceModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h3 id="modalTitle">Service Title</h3>
+          <p id="modalDescription">Detailed information about the service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Service Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAG6vmXg8_R0jnR6oP9Y3_adcO1Rbh1GI1zg&s"
+            alt="Ultrasound"
+          />
+          <p>Ultrasound</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuCyb5QXwiLrfKBsgeMWwS0KnAECJ4Ksy-pw&s"
+            alt="X-Ray"
+          />
+          <p>X‑Ray</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST4LJ6aKrYiiYwoctU1EE9LKR26m3qCe_Rcw&s"
+            alt="Delivery Room"
+          />
+          <p>Normal Delivery</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg-trZwy8-AJ-TPAv-plshj0xeLBHzIoXgIg&s"
+            alt="Laboratory"
+          />
+          <p>Laboratory</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="appointment">
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email (optional):</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="message">Describe Your Problem:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        <strong>Location:</strong> Karhal Chauraha, Agra Bypass Road, Mainpuri
+      </p>
+      <p><strong>Phone:</strong> 7535905959, 7017202805</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1752641658819!6m8!1m7!1snI-x84x72fnKI8mDMFi6uQ!2m2!1d27.2196116787636!2d79.02107133355607!3f204.85346498403857!4f8.278287377669258!5f0.7820865974627469"
+          width="600"
+          height="450"
+          class="hospital-map"
+          allowfullscreen=""
+          title="Suryansh Hospital Location"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Suryansh Hospital. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
