@@ -103,9 +103,21 @@
     </header>
 
     <div class="sub-header">
-      <marquee behavior="scroll" direction="left" scrollamount="7" style="color: white; background-color: crimson; font-size: 20px; font-weight: bold; padding: 8px;" >
-        🚨 Emergency Delivery Available 24/7 | Expert in Normal & C-Section Deliveries | We provide 24×7 Emergency Services | ICU | Oxygen | Ventilator
-        Support | Dialysis | Ambulance Available Anytime 🚑
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="7"
+        style="
+          color: white;
+          background-color: crimson;
+          font-size: 20px;
+          font-weight: bold;
+          padding: 8px;
+        "
+      >
+        🚨 Emergency Delivery Available 24/7 | Expert in Normal & C-Section
+        Deliveries | We provide 24×7 Emergency Services | ICU | Oxygen |
+        Ventilator Support | Dialysis | Ambulance Available Anytime 🚑
       </marquee>
     </div>
 
@@ -215,27 +227,29 @@
 
     <section id="appointment">
       <h2>Book an Appointment</h2>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyIPa20ldmKnpj7CdH0LxBTA5wOaldhYsKCHeylNp1bxi7cw/formResponse" target="_blank" method="POST" id="appointmentForm">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="entry.2005620554" required />
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyIPa20ldmKnpj7CdH0LxBTA5wOaldhYsKCHeylNp1bxi7cw/formResponse"
+        method="POST"
+        target="_blank"
+      >
+        <label>Full Name:</label>
+        <input type="text" name="entry.2005620554" required placeholder="Enter your full name" title="Full Name" />
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="entry.1166974658" required />
+        <label>Phone Number:</label>
+        <input type="tel" name="entry.1166974658" required placeholder="Enter your phone number" title="Phone Number" />
 
-        <label for="email">Email (optional):</label>
-        <input type="email" id="email" name="email" />
+        <label>Email (optional):</label>
+        <input type="email" name="entry.2089523650" title="Email" placeholder="Enter your email address" />
 
-        <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="entry.1065046570" required />
-
-        <label for="date">Preferred Time:</label>
-        <input type="time" id="time" name="entry.632267257" required placeholder="Select preferred time" title="Preferred Time" />
-
-        <label for="message">Describe Your Problem:</label>
-        <textarea id="message" name="entry.839337160" rows="4" required></textarea>
+        <label>Preferred Date:</label>
+        <input type="text" name="entry.1171387892" placeholder="DD/MM/YYYY" required>
+ 
+        <label>Describe Your Problem:</label>
+        <textarea name="entry.2018681800" rows="4" required title="Describe Your Problem" placeholder="Describe your problem"></textarea>
 
         <button type="submit">Submit</button>
       </form>
+
       <p id="formMessage" class="form-message"></p>
     </section>
 
