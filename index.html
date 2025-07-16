@@ -215,21 +215,24 @@
 
     <section id="appointment">
       <h2>Book an Appointment</h2>
-      <form id="appointmentForm">
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyIPa20ldmKnpj7CdH0LxBTA5wOaldhYsKCHeylNp1bxi7cw/formResponse" target="_blank" method="POST" id="appointmentForm">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="entry.2005620554" required />
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required />
+        <input type="tel" id="phone" name="entry.1166974658" required />
 
         <label for="email">Email (optional):</label>
         <input type="email" id="email" name="email" />
 
         <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required />
+        <input type="date" id="date" name="entry.1065046570" required />
+
+        <label for="date">Preferred Time:</label>
+        <input type="time" id="time" name="entry.632267257" required placeholder="Select preferred time" title="Preferred Time" />
 
         <label for="message">Describe Your Problem:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <textarea id="message" name="entry.839337160" rows="4" required></textarea>
 
         <button type="submit">Submit</button>
       </form>
